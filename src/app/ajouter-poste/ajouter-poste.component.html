@@ -1,0 +1,16 @@
+<div class="container ">
+    <div class="row d-flex align-items-center justify-content-center">
+        <div class="">
+            <div class="card">
+                <img [src]="getImage()" class="img-fluid" style="width: 200px;height: 100px;cursor: pointer;">
+                <div class="p-2">
+                    <input type="text" class="form-control" placeholder="image" [(ngModel)]="image" aria-label="Username" aria-describedby="basic-addon1" #img >
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="commentaires" #comment></textarea>
+                    <hr>
+                    <button type="submit" class="btn btn-success" (click)="ajouterPoste(comment.value)">ajouter</button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>

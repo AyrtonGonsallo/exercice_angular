@@ -1,0 +1,18 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<h3>Liste des commentaires</h3>
+
+<div class="panel-heading" style="border-radius: 20px;background-color: darkgrey;">
+    <span class="glyphicon glyphicon-comment"></span>
+    <h3 class="panel-title">
+        Recent Comments</h3>
+    <span class="label label-info">
+        78</span>
+</div>
+<ul>
+    <li *ngFor="let p of posts">
+        <app-comment [titre]="p.titre" [contenu]="p.contenu" [dateheure]="p.dateheure" [idparent]="idparent" *ngIf="p.id==idparent"></app-comment>
+    </li>
+</ul>

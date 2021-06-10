@@ -1,0 +1,11 @@
+<h3>Ajouter Post</h3>
+<form class="container-fluid">
+    <div class="input-group">
+      <span class="input-group-text" id="basic-addon1">@</span>
+      <input type="text" class="form-control" placeholder="titre" aria-label="Username" aria-describedby="basic-addon1" #titre>
+    </div>
+    <div class="input-group">
+         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="commentaires" #comment></textarea>
+      </div>
+      <button class="btn btn-outline-success me-2" type="button" (click)="addPost(titre.value,comment.value)">Envoyer</button>
+  </form>
